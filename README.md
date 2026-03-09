@@ -46,6 +46,7 @@ GitHub Pages の初期構成として `docs/` を追加しています。
 
 公開は GitHub の **Settings > Pages** で Branch を `main`、Folder を `/docs` に設定してください。
 
+
 ## ライセンス
 
 このリポジトリは MIT License の下で公開されています。
