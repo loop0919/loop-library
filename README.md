@@ -8,19 +8,44 @@
 - Python で書いた実装を Codon でも活用しやすくする
 - 再利用可能なテンプレートと検証手順をまとめる
 
-## 想定内容
+## ディレクトリ構成
 
-- データ構造（Union-Find, Segment Tree など）
-- グラフアルゴリズム（最短路, 木DP, LCA など）
-- 数学（mod 演算, 組み合わせ, 素数関連）
-- 文字列（Z-algorithm, Rolling Hash など）
-- 入出力・テンプレート
+- `pyhton/src`: Python 実装のソース
+- `pyhton/test`: Python 実装の verify テスト
+- `codon/src`: Codon 実装のソース
+- `codon/test`: Codon 実装の verify テスト
+- `docs/`: GitHub Pages 用ドキュメント
 
-## 方針
+## 優先ライブラリ
 
-- まずは正しさと可読性を優先
-- 必要に応じて高速化版（Python向け / Codon向け）を併記
-- 典型問題での動作確認を行う
+- Lowest Common Ancestor（LCA）
+- Rolling Hash（累積和ベースの静的版）
+- Rolling Hash（`atcoder.segtree` ベースの動的版）
+
+> 注: DSU / セグ木本体は AtCoder Library にあるため、このリポジトリでは優先対象外です。
+
+## Python 実装における依存
+
+`atcoder.segtree` 版 Rolling Hash は、以下の `ac-library-python` を利用します。
+
+- https://github.com/not522/ac-library-python
+
+インストール例:
+
+```bash
+pip install git+https://github.com/not522/ac-library-python
+```
+
+## GitHub Pages
+
+GitHub Pages の初期構成として `docs/` を追加しています。
+
+- エントリページ: `docs/index.md`
+- Python 説明ページ: `docs/python.md`
+- Codon 説明ページ: `docs/codon.md`
+
+公開は GitHub の **Settings > Pages** で Branch を `main`、Folder を `/docs` に設定してください。
+
 
 ## ライセンス
 
