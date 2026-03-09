@@ -1,15 +1,15 @@
 # Codon ライブラリ説明
 
-このセクションでは `codon/src`（Codon 実装）に入る各モジュールの説明を掲載します。
+Codon 実装は `codon/src`、verify テストは `codon/test` に配置します。
 
-## 書くとよい内容
+## 優先実装対象
 
-- Python 実装との差分
-- Codon 特有の最適化ポイント
-- 計算量
-- verify テストとの対応（`codon/test` 内のファイル名）
+- Lowest Common Ancestor（LCA）
+- Rolling Hash（静的版: 累積和）
+- Rolling Hash（動的版: セグ木）
 
-## 例
+## 実装方針
 
-- `union_find.codon`: Codon 版 Union-Find
-- `segment_tree.codon`: Codon 版セグメント木
+- Python 実装と API をなるべくそろえる
+- Codon 特有の高速化を必要箇所に適用する
+- 各モジュールに対応する verify テストを `codon/test` に追加する
